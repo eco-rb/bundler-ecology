@@ -22,7 +22,19 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+Put `.bundler-ecology.yml` to your project directory with the following content:
+
+```yml
+disallowed:
+  - name: <gem_name>
+  - name: <gem_name>
+  - name: <gem_name>
+  ...
+```
+
+And then execute:
+
+    $ bundle
 
 ## Development
 
