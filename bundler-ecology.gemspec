@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/eco-rb/bundler-ecology'
   spec.license       = 'MIT'
 
-  spec.files         = Dir['CHANGELOG.md', 'LICENSE', 'README.md', 'lib/**/*']
+  spec.files         = Dir['CHANGELOG.md', 'LICENSE', 'README.md',
+                           'plugins.rb', 'lib/**/*']
+
   spec.require_paths = ['lib']
 end

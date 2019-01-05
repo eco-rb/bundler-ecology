@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+plugin 'bundler-ecology', git: '../../../'
+
+source 'https://rubygems.org'
+
+gem 'sequel'
+
+group(:with_disallowed_dependencies) do
+  gem 'pundit'
+end
