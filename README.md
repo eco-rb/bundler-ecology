@@ -22,7 +22,7 @@ And then execute:
     
 Or install it globally as a plugin:
 
-    $ bundler install bundler-ecology
+    $ bundler plugin install bundler-ecology
 
 ## Usage
 
