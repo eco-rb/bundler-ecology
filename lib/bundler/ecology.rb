@@ -1,21 +1,24 @@
 # frozen_string_literal: true
 
+require 'bundler/ecology/handlers/before_install'
 require 'bundler/ecology/version'
-require 'yaml'
 
 module Bundler
   module Ecology
     def self.register
-      config_file_content = File.read('.bundler-ecology.yml')
-      config = YAML.safe_load(config_file_content, symbolize_names: true)
-      @gem_names = config[:disallowed].map { |item| item[:name] }
+      before_install_handler = Handlers::BeforeInstall.new(config)
 
       Bundler::Plugin.add_hook('before-install') do |dependency|
-        next unless @gem_names.include?(dependency.name)
-
-        raise Bundler::PluginError,
-              "Gemfile contains a disallowed dependency: #{dependency.name}"
+        before_install_handler.call(dependency)
       end
+    end
+
+    def self.config
+      config_file_name = '.bundler-ecology.yml'
+      return { disallowed: [] } unless File.exist?(config_file_name)
+
+      config_file_content = File.read(config_file_name)
+      YAML.safe_load(config_file_content, symbolize_names: true)
     end
   end
 end
