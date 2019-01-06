@@ -4,6 +4,7 @@ require 'bundler/ecology/handlers/before_install'
 require 'bundler/ecology/version'
 
 module Bundler
+  # Bundler plugin to blacklist gems from lockfiles.
   module Ecology
     def self.register
       before_install_handler = Handlers::BeforeInstall.new(config)
