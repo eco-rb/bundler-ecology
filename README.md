@@ -19,6 +19,10 @@ plugin 'bundler-ecology'
 And then execute:
 
     $ bundle
+    
+Or install it globally as a plugin:
+
+    $ bundler install bundler-ecology
 
 ## Usage
 
