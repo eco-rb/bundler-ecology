@@ -5,6 +5,7 @@ require 'yaml'
 module Bundler
   module Ecology
     module Handlers
+      # Bundle plugin handler used with the 'before-install' hook.
       class BeforeInstall
         def initialize(config)
           @gem_names = config.fetch(:disallowed, []).map { |item| item[:name] }
