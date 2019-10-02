@@ -28,15 +28,15 @@ Or install it globally as a plugin:
 
 ## Usage
 
-Put `.bundler-ecology.yml` to your project directory with the following content:
+Add a file `.bundler-ecology.yml` to your project directory, and list gem names you want to disallow:
 
 ```yml
 disallowed:
-  - name: <gem_name>
-  - name: <gem_name>
-  - name: <gem_name>
-  ...
+  - name: rspec-art_forgery
+  - name: big_knorp_potato
 ```
+
+This example disallows two fictional gems, `rspec-art_forgery` and `big_knorp_potato`.
 
 And then execute:
 
