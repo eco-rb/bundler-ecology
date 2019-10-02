@@ -8,6 +8,8 @@
 
 # Bundler::Ecology
 
+Bundler plugin to blacklist gems from lockfiles.
+
 ## Installation
 
 Add this line to your Gemfile:
