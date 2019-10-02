@@ -12,6 +12,8 @@ Gem::Specification.new do |spec|
   spec.description   = 'No unwanted gems more in your Gemfile.lock'
   spec.homepage      = 'https://github.com/eco-rb/bundler-ecology'
   spec.license       = 'MIT'
+  
+  spec.metadata    = { "source_code_uri" => "https://github.com/eco-rb/bundler-ecology" }
 
   spec.files         = Dir['CHANGELOG.md', 'LICENSE', 'README.md',
                            'plugins.rb', 'lib/**/*']
