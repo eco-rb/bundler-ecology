@@ -15,6 +15,12 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir['CHANGELOG.md', 'LICENSE', 'README.md',
                            'plugins.rb', 'lib/**/*']
+  
+  spec.metadata = { 
+    "source_code_uri" => "https://github.com/eco-rb/bundler-ecology",
+    "bug_tracker_uri"   => "https://github.com/eco-rb/bundler-ecology/issues",
+    "changelog_uri"     => "https://github.com/eco-rb/bundler-ecology/blob/v#{spec.version}/CHANGELOG.md"
+  }
 
   spec.require_paths = ['lib']
 end
